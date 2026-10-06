@@ -1,0 +1,10 @@
+flowchart TD
+Start["Receive locator<br/>Explicit timeout and polling"]
+Find["Re-find element<br/>Missing / stale -> poll again<br/>Other errors -> fail"]
+Ready["Check readiness<br/>Visible + enabled + positive box<br/>Center hit-test unobscured<br/>Bounding rectangle stable"]
+Poll["Not ready<br/>Deadline not elapsed: poll<br/>Deadline elapsed: timeout"]
+Click["Perform one WebDriver click<br/>Return or surface click failure"]
+Start --> Find
+Find --> Ready
+Ready -->|false| Poll
+Ready -->|true| Click

@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="../Automation.Selenium/Automation.Selenium.csproj" />
+    <ProjectReference Include="../Automation.Api/Automation.Api.csproj" />
+    <ProjectReference Include="../Automation.Integrations/Automation.Integrations.csproj" />
+    <PackageReference Include="NUnit" Version="4.3.2" />
+  </ItemGroup>
+</Project>

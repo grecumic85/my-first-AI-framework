@@ -1,0 +1,37 @@
+name: Public date-picker examples
+on:
+  workflow_dispatch:
+    inputs:
+      site:
+        description: Site to exercise
+        type: choice
+        default: all
+        options: [all, lastest, globalsqa, practice, uk]
+permissions:
+  contents: read
+jobs:
+  calendars:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      SELECTED_SITE: ${{ inputs.site }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+      - run: dotnet restore WebAutomation.sln --locked-mode --configfile NuGet.Config
+      - run: dotnet build WebAutomation.sln -c Release --no-restore
+      - run: dotnet run --project tools/DatePickerRunner -c Release --no-build -- --self-test
+      - name: Execute selected public examples
+        shell: bash
+        run: |
+          args=(--live)
+          if [ "$SELECTED_SITE" != "all" ]; then args+=(--site "$SELECTED_SITE"); fi
+          dotnet run --project tools/DatePickerRunner -c Release --no-build -- "${args[@]}"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: public-calendar-results
+          path: artifacts/
+          retention-days: 7

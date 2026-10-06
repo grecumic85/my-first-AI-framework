@@ -1,0 +1,194 @@
+﻿{
+    "edition":  2,
+    "execution":  "Shared scenario bodies via DatePickerRunner, headless Chrome",
+    "aggregation":  "Latest verified result per case from three execution batches; not a single final all-site invocation",
+    "total":  19,
+    "passed":  19,
+    "results":  [
+                    {
+                        "id":  "GSQ-01",
+                        "site":  "globalsqa",
+                        "description":  "Iframe simple picker selects leap day and closes",
+                        "outcome":  "Passed",
+                        "seconds":  18.5981508,
+                        "observedAtUtc":  "2026-09-14T12:05:21.9742076+00:00",
+                        "batch":  "datepickers-globalsqa-final"
+                    },
+                    {
+                        "id":  "GSQ-02",
+                        "site":  "globalsqa",
+                        "description":  "Backward navigation across year boundary replaces existing selection",
+                        "outcome":  "Passed",
+                        "seconds":  14.3528041,
+                        "observedAtUtc":  "2026-09-14T12:05:21.9742076+00:00",
+                        "batch":  "datepickers-globalsqa-final"
+                    },
+                    {
+                        "id":  "GSQ-03",
+                        "site":  "globalsqa",
+                        "description":  "Month/year dropdowns select a distant leap day inside the correct iframe",
+                        "outcome":  "Passed",
+                        "seconds":  9.4841769,
+                        "observedAtUtc":  "2026-09-14T12:05:21.9742076+00:00",
+                        "batch":  "datepickers-globalsqa-final"
+                    },
+                    {
+                        "id":  "GSQ-04",
+                        "site":  "globalsqa",
+                        "description":  "Icon trigger chooses month end and reopens at selected month",
+                        "outcome":  "Passed",
+                        "seconds":  18.2710858,
+                        "observedAtUtc":  "2026-09-14T12:05:21.9742076+00:00",
+                        "batch":  "datepickers-globalsqa-final"
+                    },
+                    {
+                        "id":  "GSQ-05",
+                        "site":  "globalsqa",
+                        "description":  "Escape after browsing another month preserves previously committed value",
+                        "outcome":  "Passed",
+                        "seconds":  9.1531819,
+                        "observedAtUtc":  "2026-09-14T12:05:21.9742076+00:00",
+                        "batch":  "datepickers-globalsqa-final"
+                    },
+                    {
+                        "id":  "LAT-01",
+                        "site":  "lastest",
+                        "description":  "Leap-month disabled weekends and exact selected-date message",
+                        "outcome":  "Passed",
+                        "seconds":  25.9732285,
+                        "observedAtUtc":  "2026-09-14T12:01:57.2402008+00:00",
+                        "batch":  "datepickers-validation"
+                    },
+                    {
+                        "id":  "LAT-02",
+                        "site":  "lastest",
+                        "description":  "Cross-month range counts calendar nights including weekends",
+                        "outcome":  "Passed",
+                        "seconds":  4.8999898,
+                        "observedAtUtc":  "2026-09-14T12:01:57.2402008+00:00",
+                        "batch":  "datepickers-validation"
+                    },
+                    {
+                        "id":  "LAT-03",
+                        "site":  "lastest",
+                        "description":  "Earlier second click restarts check-in before completing a new range",
+                        "outcome":  "Passed",
+                        "seconds":  4.8894202,
+                        "observedAtUtc":  "2026-09-14T12:01:57.2402008+00:00",
+                        "batch":  "datepickers-validation"
+                    },
+                    {
+                        "id":  "LAT-04",
+                        "site":  "lastest",
+                        "description":  "Reset completed range preserves the independent single calendar",
+                        "outcome":  "Passed",
+                        "seconds":  7.2069076,
+                        "observedAtUtc":  "2026-09-14T12:01:57.2402008+00:00",
+                        "batch":  "datepickers-validation"
+                    },
+                    {
+                        "id":  "LAT-05",
+                        "site":  "lastest",
+                        "description":  "Range crosses December/January and validates endpoint availability",
+                        "outcome":  "Passed",
+                        "seconds":  7.3123388,
+                        "observedAtUtc":  "2026-09-14T12:01:57.2402008+00:00",
+                        "batch":  "datepickers-validation"
+                    },
+                    {
+                        "id":  "PRA-01",
+                        "site":  "practice",
+                        "description":  "Leap day selection produces ISO date and closes the popup",
+                        "outcome":  "Passed",
+                        "seconds":  25.7210661,
+                        "observedAtUtc":  "2026-09-14T12:01:57.2402008+00:00",
+                        "batch":  "datepickers-validation"
+                    },
+                    {
+                        "id":  "PRA-02",
+                        "site":  "practice",
+                        "description":  "December/January navigation selects exact dates despite adjacent-month cells",
+                        "outcome":  "Passed",
+                        "seconds":  10.4568837,
+                        "observedAtUtc":  "2026-09-14T12:01:57.2402008+00:00",
+                        "batch":  "datepickers-validation"
+                    },
+                    {
+                        "id":  "PRA-03",
+                        "site":  "practice",
+                        "description":  "Typed ISO leap date synchronizes calendar then UI selection replaces it",
+                        "outcome":  "Passed",
+                        "seconds":  7.1177844,
+                        "observedAtUtc":  "2026-09-14T12:01:57.2402008+00:00",
+                        "batch":  "datepickers-validation"
+                    },
+                    {
+                        "id":  "PRA-04",
+                        "site":  "practice",
+                        "description":  "Escape cancels month browsing and preserves committed date",
+                        "outcome":  "Passed",
+                        "seconds":  7.316771,
+                        "observedAtUtc":  "2026-09-14T12:01:57.2402008+00:00",
+                        "batch":  "datepickers-validation"
+                    },
+                    {
+                        "id":  "UK-01",
+                        "site":  "uk",
+                        "description":  "Leap day and PM time are formatted into the combined field",
+                        "outcome":  "Passed",
+                        "seconds":  24.2184876,
+                        "observedAtUtc":  "2026-09-14T12:17:47.9643791+00:00",
+                        "batch":  "datepickers-uk-verified"
+                    },
+                    {
+                        "id":  "UK-02",
+                        "site":  "uk",
+                        "description":  "Range selection crosses year boundary with exact serialized endpoints",
+                        "outcome":  "Passed",
+                        "seconds":  9.7511476,
+                        "observedAtUtc":  "2026-09-14T12:17:47.9643791+00:00",
+                        "batch":  "datepickers-uk-verified"
+                    },
+                    {
+                        "id":  "UK-03",
+                        "site":  "uk",
+                        "description":  "Reversed range selection sorts endpoints across leap day",
+                        "outcome":  "Passed",
+                        "seconds":  23.6112902,
+                        "observedAtUtc":  "2026-09-14T12:17:47.9643791+00:00",
+                        "batch":  "datepickers-uk-verified"
+                    },
+                    {
+                        "id":  "UK-04",
+                        "site":  "uk",
+                        "description":  "Week-number picker reset clears its value while preserving another range",
+                        "outcome":  "Passed",
+                        "seconds":  14.2318833,
+                        "observedAtUtc":  "2026-09-14T12:17:47.9643791+00:00",
+                        "batch":  "datepickers-uk-verified"
+                    },
+                    {
+                        "id":  "UK-05",
+                        "site":  "uk",
+                        "description":  "Time-only picker accepts midnight and end-of-day minute boundary",
+                        "outcome":  "Passed",
+                        "seconds":  7.1493869,
+                        "observedAtUtc":  "2026-09-14T12:17:47.9643791+00:00",
+                        "batch":  "datepickers-uk-verified"
+                    }
+                ],
+    "scenarioSourceHashes":  [
+                                 {
+                                     "file":  "Calendars.cs",
+                                     "sha256":  "363fa125d9dfe8ee6d72fa6dfb6673b998b162c8094a4c39a173d4b292f2c40c"
+                                 },
+                                 {
+                                     "file":  "Scenarios.cs",
+                                     "sha256":  "f6a5a2579015407b6b8588ccc7a5e6fcf5b3d18c8e54b6b6d8524b9a48755d8f"
+                                 },
+                                 {
+                                     "file":  "SitePages.cs",
+                                     "sha256":  "3746e1a62252a6fd0ecdf657aa2ac8915d3915b31a2a0aabaf8c83cd94eab990"
+                                 }
+                             ]
+}

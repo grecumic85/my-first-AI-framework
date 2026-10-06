@@ -1,0 +1,18 @@
+sequenceDiagram
+participant A0 as Scenario
+participant A1 as Generated
+participant A2 as Audit
+participant A3 as Retry
+participant A4 as Bearer
+participant A5 as Transport
+A0->>A1: call generated method with DTO + cancellation
+A1->>A2: send HttpRequestMessage through injected HttpClient
+A2->>A3: start logical-request timer
+A3->>A4: send attempt; only bodyless GET/HEAD can retry
+A4->>A4: get cached token or acquire through provider
+A4->>A5: attach bearer when configured; send
+A5-->>A3: response or transport failure
+A3->>A3: bounded retry if eligible; dispose transient response
+A3-->>A2: final response
+A2-->>A1: record status / elapsed metadata
+A1-->>A0: deserialize DTO or throw typed API exception

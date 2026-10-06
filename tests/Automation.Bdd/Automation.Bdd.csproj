@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><IsTestProject>true</IsTestProject><IsPackable>false</IsPackable></PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../../src/Automation.Testing/Automation.Testing.csproj" />
+    <ProjectReference Include="../../src/Automation.Generated/Automation.Generated.csproj" />
+    <ProjectReference Include="../../samples/SampleApp/SampleApp.csproj" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.13.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="5.0.0" />
+    <PackageReference Include="Reqnroll.NUnit" Version="2.4.1" />
+    <PackageReference Include="Reqnroll.Tools.MsBuild.Generation" Version="2.4.1" />
+  </ItemGroup>
+  <ItemGroup><Compile Include="../Shared/SampleServer.cs" Link="SampleServer.cs" /></ItemGroup>
+</Project>

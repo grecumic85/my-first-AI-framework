@@ -1,0 +1,18 @@
+flowchart TD
+Tests["Tests and scenarios<br/>Compose optional capabilities"]
+Testing["Automation.Testing<br/>TestScope + NUnit lifecycle<br/>Uses API / Selenium / integrations"]
+Generated["Automation.Generated<br/>Generated interfaces / DTOs<br/>Injected HttpClient"]
+Database["Database / Emulation<br/>EF contexts / WireMock<br/>Emulation also uses API"]
+Selenium["Automation.Selenium<br/>Drivers / waits / actions"]
+Api["Automation.Api<br/>Auth / retry / audit"]
+Integrations["Automation.Integrations<br/>Publishers / inbox / scheduler"]
+Core["Automation.Core<br/>Settings / polling / ownership"]
+Tests --> Testing
+Tests --> Generated
+Tests --> Database
+Testing --> Selenium
+Testing --> Api
+Testing --> Integrations
+Selenium --> Core
+Api --> Core
+Integrations --> Core

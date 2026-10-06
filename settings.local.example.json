@@ -1,0 +1,7 @@
+{
+  "BaseUrl": "https://your-app.example/",
+  "ApiBaseUrl": "https://your-app.example/api/",
+  "Browser": { "Headless": false },
+  "Auth": { "Mode": "None" },
+  "Database": { "Provider": "PostgreSql", "AllowWrites": false }
+}

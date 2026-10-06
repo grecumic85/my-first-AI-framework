@@ -1,0 +1,21 @@
+name: Framework checks
+on: [push, pull_request]
+jobs:
+  framework:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+      - run: dotnet restore WebAutomation.sln --locked-mode --configfile NuGet.Config
+      - run: dotnet run --project tools/ApiGenerator --no-restore -- contracts/services.json
+      - run: git diff --exit-code -- src/Automation.Generated
+      - run: dotnet run --project tools/SmokeCheck --no-restore
+      - run: dotnet run --project tools/DatePickerRunner --no-restore -- --self-test
+      - run: dotnet test WebAutomation.sln --no-restore --filter 'TestCategory!=UI' --logger trx --results-directory artifacts/results
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: test-results
+          path: artifacts/

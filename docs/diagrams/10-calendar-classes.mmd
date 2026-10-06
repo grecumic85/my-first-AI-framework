@@ -1,0 +1,40 @@
+classDiagram
+class MonthNavigator {
+  + GoTo(calendar, date)
+  + Select(calendar, date)
+  - maximumMonths : int
+}
+class IMonthCalendar {
+  + DisplayedMonth : DateOnly
+  + MoveMonth(direction)
+  + ClickDay(date)
+}
+class DomMonthCalendar {
+  + DisplayedMonth : DateOnly
+  + MoveMonth(direction)
+  + ClickDay(date)
+}
+class FakeCalendar {
+  + Stuck / Step / Moves
+  + DisplayedMonth
+  + ClickDay(date)
+}
+class CalendarPage {
+  + Wait : BrowserWait
+  + Navigator : MonthNavigator
+  + ExpectValue(input, value)
+}
+class SitePages {
+  Lastest / GlobalSQA / Practice / UK
+  Create configured DomMonthCalendar
+}
+class BrowserWait {
+  + Click(locator)
+  + Until(condition, message)
+}
+MonthNavigator ..> IMonthCalendar : depends on
+IMonthCalendar <|.. DomMonthCalendar : implements
+IMonthCalendar <|.. FakeCalendar : test double
+CalendarPage --> MonthNavigator : uses
+CalendarPage <|-- SitePages : inherits
+DomMonthCalendar --> BrowserWait : delegates readiness

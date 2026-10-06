@@ -1,0 +1,13 @@
+flowchart TD
+Process["Developer / CI test process<br/>.NET runner + libraries<br/>Owns per-test clients / evidence"]
+Local["Local browser process<br/>ChromeDriver -> Chrome<br/>Fresh session per case"]
+Grid["Optional Selenium Grid<br/>Hub / node -> remote browser<br/>Node must reach app / emulator"]
+Services["Optional service processes<br/>PostgreSQL / MailHog<br/>Private test environment"]
+SUT["Application endpoints<br/>Sample server or public demos"]
+Mock["Owned WireMock server<br/>Random port; no shared reset"]
+Process --> Local
+Process --> Grid
+Process --> Services
+Local --> SUT
+Grid --> SUT
+SUT -->|configured upstream| Mock

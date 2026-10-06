@@ -1,0 +1,3 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup><ProjectReference Include="../../src/Automation.Testing/Automation.Testing.csproj" /></ItemGroup>
+</Project>

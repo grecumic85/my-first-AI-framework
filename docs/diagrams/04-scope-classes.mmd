@@ -1,0 +1,34 @@
+classDiagram
+class AutomationTest {
+  + SetUpScope()
+  + TearDownScope()
+}
+class TestScope {
+  + Settings : AutomationSettings
+  + Browsers : BrowserSessions
+  + ApiHttp : HttpClient
+  + CompleteAsync(outcome)
+  + DisposeAsync()
+}
+class CleanupScope {
+  + Register(name, action)
+  + DisposeAsync()
+  - actions : Stack
+}
+class BrowserSessions {
+  + Current : IWebDriver
+  + Start() / SwitchTo(index)
+  + Dispose()
+}
+class ArtifactDirectory {
+  + Path : string
+  + File(name)
+}
+class IBrowserFactory {
+  + Create(downloadDirectory)
+}
+AutomationTest *-- TestScope : owns
+TestScope *-- CleanupScope : owns
+TestScope *-- BrowserSessions : owns
+TestScope *-- ArtifactDirectory : owns
+BrowserSessions ..> IBrowserFactory : depends on

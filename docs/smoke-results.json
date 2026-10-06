@@ -1,0 +1,47 @@
+[
+  {
+    "Name": "generated client CRUD",
+    "Passed": true,
+    "Failure": null
+  },
+  {
+    "Name": "polling and timeout",
+    "Passed": true,
+    "Failure": null
+  },
+  {
+    "Name": "reverse cleanup continues after failure",
+    "Passed": true,
+    "Failure": null
+  },
+  {
+    "Name": "emulator request journal",
+    "Passed": true,
+    "Failure": null
+  },
+  {
+    "Name": "stateful emulator and HTTP retry",
+    "Passed": true,
+    "Failure": null
+  },
+  {
+    "Name": "admin emulator resource lifecycle",
+    "Passed": true,
+    "Failure": null
+  },
+  {
+    "Name": "SQLite repositories and rollback",
+    "Passed": true,
+    "Failure": null
+  },
+  {
+    "Name": "PDF text extraction",
+    "Passed": true,
+    "Failure": null
+  },
+  {
+    "Name": "real Chrome page, waits, network and download",
+    "Passed": true,
+    "Failure": null
+  }
+]

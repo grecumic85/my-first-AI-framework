@@ -1,0 +1,12 @@
+flowchart TD
+Test["Test scenario<br/>Owns configuration and cleanup<br/>Correlates requests by mapping"]
+HttpEmulator["HttpEmulator<br/>Random-port WireMock server<br/>Stub / Sequence / request journal<br/>Dispose owned mappings/server"]
+RequestCapture["RequestCapture<br/>In-memory HttpMessageHandler<br/>Invoke one generated operation<br/>Capture method/path/query/body"]
+Admin["AdminEmulatorClient<br/>Settings / benchmarks HTTP API<br/>Owned helpers register deletion<br/>Separate control-service contract"]
+App["Application under test<br/>Explicit upstream URL configuration"]
+AdminServer["Admin emulator service<br/>SampleApp implements neutral demo"]
+Test --> HttpEmulator
+Test --> RequestCapture
+Test --> Admin
+App -->|upstream calls| HttpEmulator
+Admin -->|HTTP| AdminServer

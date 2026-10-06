@@ -1,0 +1,9 @@
+flowchart TD
+Empty["No selection<br/>Status: select check-in<br/>Reset returns here"]
+Start["Check-in selected<br/>First eligible day becomes start<br/>Earlier second click replaces start<br/>Status asks for check-out"]
+Complete["Range complete<br/>Later second click becomes end<br/>Nights = end.DayNumber - start"]
+Disabled["Disabled weekend<br/>Cannot select via normal UI<br/>Availability verified before selection"]
+Empty -->|first weekday| Start
+Start -->|later weekday| Complete
+Complete -->|Reset| Empty
+Start -->|Reset| Empty

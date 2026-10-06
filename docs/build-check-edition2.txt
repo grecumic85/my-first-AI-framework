@@ -1,0 +1,6 @@
+﻿Final edition 2: dotnet build WebAutomation.sln --no-restore --disable-build-servers -p:UseSharedCompilation=false -c Release --verbosity quiet
+Build succeeded. 0 warnings. 0 errors. 17 projects. Elapsed 12.93 seconds.
+Fresh archive extraction: locked restore passed.
+dotnet build WebAutomation.sln --no-restore --disable-build-servers -p:UseSharedCompilation=false -c Release --verbosity quiet
+Build succeeded. 0 warnings. 0 errors. 17 projects. Elapsed 29.43 seconds.
+DatePickerRunner --self-test from extracted archive: 8/8 passed.

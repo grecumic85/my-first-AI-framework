@@ -1,0 +1,9 @@
+{
+  "BaseUrl": "http://localhost:5080/",
+  "ApiBaseUrl": "http://localhost:5080/",
+  "ArtifactsPath": "artifacts",
+  "Browser": { "Name": "chrome", "Headless": true, "GridUrl": null, "CommandTimeoutSeconds": 120 },
+  "Wait": { "TimeoutSeconds": 30, "PollMilliseconds": 100, "StableMilliseconds": 300 },
+  "Auth": { "Mode": "None" },
+  "Database": { "Provider": "PostgreSql", "ConnectionString": "", "AllowWrites": false }
+}

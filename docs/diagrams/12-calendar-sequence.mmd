@@ -1,0 +1,19 @@
+sequenceDiagram
+participant A0 as Scenario
+participant A1 as SitePage
+participant A2 as Navigator
+participant A3 as Calendar
+participant A4 as Wait
+participant A5 as Browser
+A0->>A1: open site / choose widget and iframe
+A1->>A3: configure header, arrows and full-date locator
+A0->>A2: Select(calendar, targetDate)
+A2->>A3: read displayed month; enforce distance budget
+A2->>A3: MoveMonth(sign) for each required step
+A3->>A4: wait for arrow readiness; click once
+A4->>A5: native click and header observations
+A3-->>A2: expected adjacent month reached
+A2->>A3: ClickDay(targetDate) in target month
+A3->>A5: native click on fully qualified date cell
+A0->>A1: assert committed value / range status
+A1->>A4: wait for exact business result

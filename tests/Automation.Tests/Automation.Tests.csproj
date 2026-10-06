@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><IsTestProject>true</IsTestProject><IsPackable>false</IsPackable></PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../../src/Automation.Testing/Automation.Testing.csproj" />
+    <ProjectReference Include="../../src/Automation.Database/Automation.Database.csproj" />
+    <ProjectReference Include="../../src/Automation.Documents/Automation.Documents.csproj" />
+    <ProjectReference Include="../../src/Automation.Emulation/Automation.Emulation.csproj" />
+    <ProjectReference Include="../../src/Automation.Generated/Automation.Generated.csproj" />
+    <ProjectReference Include="../../samples/SampleApp/SampleApp.csproj" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.13.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="5.0.0" />
+    <PackageReference Include="Moq" Version="4.20.72" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="../../settings.json" Link="settings.json" CopyToOutputDirectory="PreserveNewest" />
+    <Compile Include="../Shared/SampleServer.cs" Link="SampleServer.cs" />
+  </ItemGroup>
+</Project>

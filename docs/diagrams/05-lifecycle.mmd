@@ -1,0 +1,16 @@
+sequenceDiagram
+participant A0 as Runner
+participant A1 as TestScope
+participant A2 as Browser
+participant A3 as Cleanup
+participant A4 as Result
+A0->>A1: construct scope; browser starts lazily
+A0->>A2: execute page action and assertions
+A0->>A1: CompleteAsync(outcome)
+A1->>A2: if failed: capture screenshot and page HTML
+A1->>A3: dispose: callbacks in reverse registration order
+A3-->>A1: collect failures; continue remaining callbacks
+A1->>A2: dispose every owned driver
+A1->>A1: dispose API and token resources
+A1->>A4: write result; cleanup failure means Failed
+A1-->>A0: surface cleanup failure when present

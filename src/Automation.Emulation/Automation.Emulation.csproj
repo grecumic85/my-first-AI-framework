@@ -1,0 +1,6 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="../Automation.Api/Automation.Api.csproj" />
+    <PackageReference Include="WireMock.Net" Version="1.6.10" />
+  </ItemGroup>
+</Project>

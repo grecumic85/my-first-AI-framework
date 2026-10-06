@@ -1,0 +1,16 @@
+flowchart TD
+Runner["Test runner / scenario<br/>NUnit, Reqnroll, or console"]
+UI["Browser channel<br/>Pages + components + waits<br/>User-visible behavior"]
+API["API channel<br/>Generated client + pipeline<br/>Setup and verification"]
+DB["Database channel<br/>Repository + EF context factory<br/>Eventual persisted state"]
+App["Application under test<br/>Your new web application"]
+Emulator["Upstream emulator<br/>WireMock or admin service<br/>Configured explicitly by your app"]
+Evidence["Artifacts / integrations<br/>Local JSON, PNG, HTML, files<br/>Optional inbox / remote reporting"]
+Runner --> UI
+Runner --> API
+Runner --> DB
+UI --> App
+API --> App
+DB --> App
+App -->|upstream| Emulator
+App -->|outputs| Evidence

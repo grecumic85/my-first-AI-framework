@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><OutputType>Exe</OutputType></PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../../src/Automation.Api/Automation.Api.csproj" />
+    <ProjectReference Include="../../src/Automation.Database/Automation.Database.csproj" />
+    <ProjectReference Include="../../src/Automation.Documents/Automation.Documents.csproj" />
+    <ProjectReference Include="../../src/Automation.Emulation/Automation.Emulation.csproj" />
+    <ProjectReference Include="../../src/Automation.Generated/Automation.Generated.csproj" />
+    <ProjectReference Include="../../src/Automation.Selenium/Automation.Selenium.csproj" />
+    <ProjectReference Include="../../samples/SampleApp/SampleApp.csproj" />
+  </ItemGroup>
+</Project>
