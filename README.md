@@ -1,6 +1,6 @@
 # Web Automation Starter
 
-A reusable C# automation repository adapted from the inspected framework. It includes source, generated API code, a local demonstration application, NUnit and Reqnroll examples, and an extraction report. The original application's business objects, private environments, credentials, generated domain SDKs and database schemas are not required.
+A reusable C# automation repository adapted . It includes source, generated API code, a local demonstration application, NUnit and Reqnroll examples, and an extraction report. The original application's business objects, private environments, credentials, generated domain SDKs and database schemas are not required.
 
 Start with the [offline architecture handbook](docs/handbook.html), [architecture reading guide](docs/ARCHITECTURE.md), and [validation results](docs/VALIDATION.md). The expanded documentation includes high- and low-level designs, 12 diagrams, architecture decisions, concrete SOLID examples, and a new-app implementation recipe.
 
